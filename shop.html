@@ -1,0 +1,20 @@
+<!-- shop.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Магазин</h1>
+
+  {% for product in products %}
+    <div class="product">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <!-- Другие детали товара -->
+
+      {% if product in wishlist %}
+        <p>Товар уже в избранном</p>
+      {% else %}
+        <a href="{% url 'store:add_to_wishlist' product.id %}">Добавить в избранное</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+{% endblock %}

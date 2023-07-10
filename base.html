@@ -1,0 +1,27 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой проект</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'store:home' %}">Главная</a></li>
+                <li><a href="{% url 'store:shop' %}">Магазин</a></li>
+                <li><a href="{% url 'store:wishlist' %}">Wishlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Футер -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- wishlist.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Wishlist</h1>
+
+  {% for product in wishlist %}
+    <div class="product">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <!-- Другие детали товара -->
+    </div>
+  {% endfor %}
+{% endblock %}
